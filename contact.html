@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Jenna-Leigh Henderson</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+    *{margin:0;padding:0;box-sizing:border-box;}
+
+    body{
+      font-family:"Poppins",sans-serif;
+      color:#222;
+      background:#fcf9f4;
+      display:flex;
+      flex-direction:column;
+      min-height:100vh; /* ensures footer stays at bottom */
+    }
+
+    header{
+      background:#959987;
+      padding:1rem 2rem;
+      position:sticky;
+      top:0;
+      z-index:10;
+    }
+
+    .navbar{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+    }
+
+    .nav-links{
+      list-style:none;
+      display:flex;
+      gap:1.5rem;
+    }
+
+    .nav-links a{
+      color:#444440;
+      text-decoration:none;
+      position:relative;
+      padding-bottom:5px;
+      transition:color .3s;
+    }
+    .nav-links a::after{
+      content:"";
+      position:absolute;
+      left:0;
+      bottom:0;
+      width:0%;
+      height:2px;
+      background:#fcf9f4;
+      transition:width .3s ease;
+    }
+    .nav-links a:hover{color:#fcf9f4;}
+    .nav-links a:hover::after{width:100%;}
+    .nav-links a.active::after{width:100%;}
+
+    section{
+      padding:4rem 2rem;
+      text-align:center;
+      flex:1; /* pushes footer to bottom if content is short */
+    }
+
+    h2{color:#444440;}
+
+    .btn{
+      background:#959987;
+      color:#444440;
+      padding:.7rem 1.5rem;
+      border-radius:25px;
+      text-decoration:none;
+      display:inline-block;
+      margin-top:1rem;
+      margin-right:1rem;
+      transition:background .3s;
+    }
+    .btn:hover{background:#b2b6a4; color:#444440;}
+
+    footer{
+      background:#959987;
+      color:#444440;
+      text-align:center;
+      padding:1.5rem;
+      margin-top:auto; /* keeps footer at bottom */
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="cv.html">CV</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section>
+    <h2>Contact Me</h2>
+    <p>If you'd like to get in touch or discuss a project, feel free to send me an email or connect with me on LinkedIn.</p>
+    <p>Email: jlhenderson2004@gmail.com</p>
+    <p>LinkedIn: Jenna-Leigh Henderson</p>
+    <a href="mailto:jlhenderson2004@gmail.com" class="btn">Email Me</a>
+    <a href="https://www.linkedin.com/in/jenna-leigh-henderson-b7262b266/" class="btn" target="_blank">LinkedIn</a>
+  </section>
+
+  <footer>
+    <p>© 2025 Jenna-Leigh Henderson</p>
+  </footer>
+</body>
+</html>

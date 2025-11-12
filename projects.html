@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | Jenna-Leigh Henderson</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+    *{margin:0;padding:0;box-sizing:border-box;}
+
+    body{
+      font-family:"Poppins",sans-serif;
+      color:#444440;
+      background:#fcf9f4;
+      line-height:1.6;
+      display:flex;
+      flex-direction:column;
+      min-height:100vh; /* Ensures footer sticks to bottom */
+    }
+
+    header{
+      background:#959987;
+      padding:1rem 2rem;
+      position:sticky;
+      top:0;
+      z-index:10;
+      box-shadow:0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .navbar{display:flex;justify-content:center;align-items:center;}
+    .nav-links{list-style:none;display:flex;gap:1.5rem;}
+    .nav-links a{
+      color:#444440;
+      text-decoration:none;
+      position:relative;
+      padding-bottom:5px;
+      font-weight:500;
+      transition:all .3s;
+    }
+    .nav-links a::after{
+      content:"";
+      position:absolute;
+      left:0;
+      bottom:0;
+      width:0%;
+      height:2px;
+      background:#fcf9f4;
+      transition:width .3s ease;
+    }
+    .nav-links a:hover{color:#fcf9f4;}
+    .nav-links a:hover::after{width:100%;}
+    .nav-links a.active::after{width:100%;}
+
+    section{
+      padding:4rem 2rem;
+      text-align:center;
+      flex:1; /* Pushes footer down if content is short */
+    }
+
+    h2{
+      color:#444440;
+      margin-bottom:2rem;
+      font-size:2rem;
+    }
+
+    .project-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:1.5rem;
+      margin-top:2rem;
+    }
+    .project-card{
+      background:#f5f3ef;
+      border-radius:15px;
+      padding:1rem;
+      box-shadow:0 8px 20px rgba(0,0,0,0.08);
+      transition:transform .3s,box-shadow .3s;
+    }
+    .project-card:hover{
+      transform:translateY(-5px);
+      box-shadow:0 12px 25px rgba(0,0,0,0.12);
+    }
+    .project-card img{
+      width:100%;
+      height:200px;
+      object-fit:cover;
+      border-radius:10px;
+      margin-bottom:1rem;
+    }
+    .project-card h3{margin:0.5rem 0;font-size:1.2rem;color:#444440;}
+    .project-card p{font-size:0.95rem;color:#555;}
+
+    .download-btn{
+      display:inline-block;
+      margin-top:2rem;
+      background:#959987;
+      color:#444440;
+      padding:0.8rem 1.8rem;
+      border-radius:30px;
+      text-decoration:none;
+      font-weight:600;
+      transition:background .3s, transform .2s;
+    }
+    .download-btn:hover{background:#7e8273;transform:translateY(-3px);}
+
+    footer{
+      background:#959987;
+      color:#444440;
+      text-align:center;
+      padding:1.8rem;
+      font-weight:500;
+      letter-spacing:0.5px;
+      margin-top:auto; /* Keeps footer at bottom */
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="projects.html" class="active">Projects</a></li>
+        <li><a href="cv.html">CV</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section>
+    <h2>Projects</h2>
+    <div class="project-grid">
+      <div class="project-card">
+        <img src="https://images.unsplash.com/photo-1581091012184-7c54c7b1b3d3?auto=format&fit=crop&w=800&q=60" alt="CAD Drawing">
+        <h3>Architectural Layout</h3>
+        <p>Created a residential floor plan with accurate layer control and annotations using AutoCAD.</p>
+      </div>
+      <div class="project-card">
+        <img src="https://images.unsplash.com/photo-1623115268755-47e8bdfa2b4b?auto=format&fit=crop&w=800&q=60" alt="Bridge Design">
+        <h3>Bridge Concept</h3>
+        <p>Designed a conceptual pedestrian bridge in Revit, balancing structure and aesthetics.</p>
+      </div>
+      <div class="project-card">
+        <img src="https://images.unsplash.com/photo-1529921879218-f69e8a0665b7?auto=format&fit=crop&w=800&q=60" alt="Civil Layout">
+        <h3>Roadway Layout</h3>
+        <p>Planned roadway alignments and grading using Civil 3D with an emphasis on accuracy and presentation.</p>
+      </div>
+    </div>
+
+    <a href="portfolio.pdf" class="download-btn" download>Download Portfolio</a>
+  </section>
+
+  <footer>
+    <p>© 2025 Jenna-Leigh Henderson</p>
+  </footer>
+</body>
+</html>

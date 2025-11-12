@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home | Jenna-Leigh Henderson</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{
+      font-family:"Poppins",sans-serif;
+      color:#444440;
+      background:#fcf9f4;
+      line-height:1.6;
+      display:flex;
+      flex-direction:column;
+      min-height:100vh;
+    }
+
+    /* Header */
+    header{
+      background:#959987;
+      padding:1rem 2rem;
+      position:sticky;
+      top:0;
+      z-index:10;
+      box-shadow:0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .navbar{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      flex-wrap:wrap;
+    }
+
+    .logo{
+      font-weight:600;
+      color:#444440;
+      font-size:1.4rem;
+      letter-spacing:1px;
+    }
+
+    .nav-links{
+      list-style:none;
+      display:flex;
+      gap:1.5rem;
+    }
+
+    .nav-links a{
+      color:#444440;
+      text-decoration:none;
+      position:relative;
+      padding-bottom:5px;
+      font-weight:500;
+      transition:all .3s;
+    }
+
+    .nav-links a::after{
+      content:"";
+      position:absolute;
+      left:0;
+      bottom:0;
+      width:0%;
+      height:2px;
+      background:#fcf9f4;
+      transition:width .3s ease;
+    }
+
+    .nav-links a:hover{color:#fcf9f4;}
+    .nav-links a:hover::after{width:100%;}
+    .nav-links a.active::after{width:100%;}
+
+    /* Hero Section */
+    .hero{
+      display:flex;
+      flex-wrap:wrap;
+      align-items:center;
+      justify-content:center;
+      padding:6rem 2rem;
+      gap:3rem;
+      background:linear-gradient(135deg,#f9f7f1,#e6e8d7);
+    }
+
+    .hero img{
+      width:320px;
+      border-radius:20px;
+      box-shadow:0 8px 20px rgba(0,0,0,0.15);
+      transition:transform .3s;
+    }
+
+    .hero img:hover{transform:scale(1.05);}
+
+    .hero-text{
+      max-width:520px;
+      text-align:center;
+    }
+
+    .hero-text h1{
+      font-size:2.6rem;
+      color:#444440;
+      margin-bottom:0.5rem;
+    }
+
+    .hero-text h2{
+      color:#959987;
+      font-weight:400;
+      margin-bottom:1.5rem;
+      font-size:1.4rem;
+    }
+
+    .btn{
+      background:#959987;
+      color:#444440;
+      padding:.8rem 2rem;
+      border-radius:30px;
+      text-decoration:none;
+      display:inline-block;
+      margin-top:1.5rem;
+      font-weight:500;
+      box-shadow:0 4px 12px rgba(0,0,0,0.1);
+      transition:all .3s;
+    }
+
+    .btn:hover{
+      background:#a6aa94;
+      transform:translateY(-3px);
+      box-shadow:0 6px 15px rgba(0,0,0,0.15);
+    }
+
+    /* Section previews with animated backgrounds */
+    .previews{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+      gap:2rem;
+      padding:4rem 2rem;
+      text-align:center;
+      flex:1;
+    }
+
+    .preview-card{
+      position: relative;
+      overflow: hidden;
+      border-radius: 25px;
+      padding: 2.2rem 1.8rem;
+      color:#fff;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+      transition: transform .4s ease, box-shadow .4s ease;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    /* Animated background gradient */
+    .preview-card::before{
+      content:"";
+      position:absolute;
+      top:0; left:0; right:0; bottom:0;
+      background: linear-gradient(270deg, #ff7e5f, #feb47b, #86a8e7, #91eae4);
+      background-size: 800% 800%;
+      animation: gradientMove 15s ease infinite;
+      z-index: -1;
+    }
+
+    @keyframes gradientMove{
+      0%{background-position:0% 50%;}
+      50%{background-position:100% 50%;}
+      100%{background-position:0% 50%;}
+    }
+
+    .preview-card:hover{
+      transform: translateY(-10px) scale(1.03);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    }
+
+    .preview-card h3{
+      margin-bottom:0.7rem;
+      font-size:1.3rem;
+    }
+
+    .preview-card p{
+      font-size:0.95rem;
+      margin-bottom:1rem;
+    }
+
+    footer{
+      background:#959987;
+      color:#444440;
+      text-align:center;
+      padding:1.8rem;
+      font-weight:500;
+      letter-spacing:0.5px;
+      margin-top:auto;
+    }
+
+    @media(max-width:768px){
+      .hero{
+        flex-direction:column;
+        padding:4rem 1rem;
+      }
+      .hero img{width:80%;}
+      .hero-text{max-width:90%;}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <h1 class="logo">Jenna-Leigh Henderson</h1>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="cv.html">CV</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <img src="indexpic.jpg" alt="Jenna-Leigh Henderson portrait">
+    <div class="hero-text">
+      <h1>Welcome!</h1>
+      <h2>CAD Designer & Future Civil Engineer</h2>
+      <p>
+        Hi, I’m <strong>Jenna-Leigh Henderson</strong> — passionate about turning ideas into precise CAD designs and bringing engineering visions to life.
+      </p>
+      <a href="about.html" class="btn">Learn More</a>
+    </div>
+  </section>
+
+  <section class="previews">
+    <div class="preview-card">
+      <h3>About Me</h3>
+      <p>Discover my background and what drives my passion for design and engineering.</p>
+      <a href="about.html" class="btn">Read More</a>
+    </div>
+    <div class="preview-card">
+      <h3>Skills</h3>
+      <p>Explore the tools and techniques I use for precise and creative design.</p>
+      <a href="skills.html" class="btn">View Skills</a>
+    </div>
+    <div class="preview-card">
+      <h3>Projects</h3>
+      <p>See my CAD drawings, 3D models, and design projects in action.</p>
+      <a href="projects.html" class="btn">See Projects</a>
+    </div>
+    <div class="preview-card">
+      <h3>CV</h3>
+      <p>Learn about my education, training, and professional goals.</p>
+      <a href="cv.html" class="btn">View CV</a>
+    </div>
+    <div class="preview-card">
+      <h3>Contact</h3>
+      <p>Interested in working together or want to know more? Let’s connect!</p>
+      <a href="contact.html" class="btn">Get in Touch</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Jenna-Leigh Henderson</p>
+  </footer>
+</body>
+</html>

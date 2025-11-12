@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skills | Jenna-Leigh Henderson</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+    *{margin:0;padding:0;box-sizing:border-box;}
+
+    body{
+      font-family:"Poppins",sans-serif;
+      color:#444440;
+      background:#fcf9f4;
+      line-height:1.6;
+      display:flex;
+      flex-direction:column;
+      min-height:100vh; /* Ensures footer stays at bottom */
+    }
+
+    header{
+      background:#959987;
+      padding:1rem 2rem;
+      position:sticky;
+      top:0;
+      z-index:10;
+      box-shadow:0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .navbar{display:flex;justify-content:center;align-items:center;}
+    .nav-links{list-style:none;display:flex;gap:1.5rem;}
+    .nav-links a{
+      color:#444440;
+      text-decoration:none;
+      position:relative;
+      padding-bottom:5px;
+      font-weight:500;
+      transition:all .3s;
+    }
+    .nav-links a::after{
+      content:"";
+      position:absolute;
+      left:0;
+      bottom:0;
+      width:0%;
+      height:2px;
+      background:#fcf9f4;
+      transition:width .3s ease;
+    }
+    .nav-links a:hover{color:#fcf9f4;}
+    .nav-links a:hover::after{width:100%;}
+    .nav-links a.active::after{width:100%;}
+
+    section{
+      padding:4rem 2rem;
+      text-align:center;
+      flex:1; /* Pushes footer to bottom if content is short */
+    }
+
+    h2{
+      color:#444440;
+      margin-bottom:2rem;
+      font-size:2rem;
+    }
+
+    .skill-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+      gap:1.5rem;
+    }
+
+    .skill-card{
+      background:#f5f3ef;
+      padding:1.5rem;
+      border-radius:15px;
+      box-shadow:0 8px 20px rgba(0,0,0,0.08);
+      font-weight:500;
+      font-size:1rem;
+      transition:transform .3s,box-shadow .3s;
+    }
+
+    .skill-card:hover{
+      transform:translateY(-5px);
+      box-shadow:0 12px 25px rgba(0,0,0,0.12);
+    }
+
+    footer{
+      background:#959987;
+      color:#444440;
+      text-align:center;
+      padding:1.8rem;
+      font-weight:500;
+      letter-spacing:0.5px;
+      margin-top:auto; /* Keeps footer at bottom */
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="skills.html" class="active">Skills</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="cv.html">CV</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section>
+    <h2>Skills</h2>
+    <div class="skill-grid">
+      <div class="skill-card">AutoCAD</div>
+      <div class="skill-card">Revit</div>
+      <div class="skill-card">Civil 3D</div>
+      <div class="skill-card">Blueprint Reading</div>
+      <div class="skill-card">3D Modelling</div>
+      <div class="skill-card">Technical Drafting</div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Jenna-Leigh Henderson</p>
+  </footer>
+</body>
+</html>
