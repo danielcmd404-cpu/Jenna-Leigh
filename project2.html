@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Outdoor Market Pavilion | Jenna-Leigh Henderson</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{
+      font-family:"Poppins",sans-serif;
+      background:#fcf9f4;
+      color:#444440;
+      line-height:1.6;
+      min-height:100vh;
+      display:flex;
+      flex-direction:column;
+    }
+    header{
+      background:#959987;
+      padding:1rem 2rem;
+      position:sticky;
+      top:0;
+      z-index:10;
+      box-shadow:0 2px 8px rgba(0,0,0,0.1);
+    }
+    .navbar{display:flex;justify-content:center;align-items:center;}
+    .nav-links{list-style:none;display:flex;gap:1.5rem;}
+    .nav-links a{
+      color:#444440;
+      text-decoration:none;
+      font-weight:500;
+      position:relative;
+      padding-bottom:5px;
+      transition:all .3s;
+    }
+    .nav-links a:hover{color:#fcf9f4;}
+    .nav-links a.active::after{
+      content:"";
+      position:absolute;
+      left:0;
+      bottom:0;
+      width:100%;
+      height:2px;
+      background:#fcf9f4;
+    }
+    section{
+      padding:3rem 2rem;
+      flex:1;
+    }
+    h2{color:#444440;margin-bottom:2rem;text-align:center;}
+    .gallery{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:1.5rem;
+    }
+    .gallery img{
+      width:100%;
+      border-radius:15px;
+      box-shadow:0 8px 20px rgba(0,0,0,0.08);
+      transition:transform .3s, box-shadow .3s;
+    }
+    .gallery img:hover{
+      transform:translateY(-5px);
+      box-shadow:0 12px 25px rgba(0,0,0,0.12);
+    }
+    footer{
+      background:#959987;
+      color:#444440;
+      text-align:center;
+      padding:1.8rem;
+      font-weight:500;
+      margin-top:auto;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html" class="active">Projects</a></li>
+        <li><a href="cv.html">CV</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section>
+    <h2>Outdoor Market Pavilion</h2>
+    <div class="gallery">
+      <img src="High-Rise 1.jpg" alt="Pavilion View 1">
+      <img src="High-Rise 2.jpg" alt="Pavilion View 2">
+      <img src="High-Rise 3.jpg" alt="Pavilion View 3">
+      <img src="High-Rise 4.jpg" alt="Pavilion View 4">
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Jenna-Leigh Henderson</p>
+  </footer>
+</body>
+</html>
